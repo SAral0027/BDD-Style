@@ -20,7 +20,7 @@ public class GitAPI extends UtilityClass{
 	@Test(priority = 0)
 	public void getUser() {
 		given()
-		.when()
+		.when() 
 			.get("users/SAral0027")
 		.then()
 			.assertThat().statusCode(200).body("id", isA(Integer.class)).log().all();
@@ -31,7 +31,7 @@ public class GitAPI extends UtilityClass{
 		.when()
 			.get("users/SAral0027/repos")
 		.then()
-			.assertThat().statusCode(200).body("[1].name", equalTo("DEMO")).log().all();
+			.assertThat().statusCode(200).body("[1].name", equalTo("BenchStudy")).log().all();
 	}
 
 	@Test(priority = 2)
